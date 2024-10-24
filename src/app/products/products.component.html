@@ -1,0 +1,35 @@
+<div>
+    <div *ngIf="selected" style="margin-top:10%">
+        <h1>List of products</h1>
+        <section>
+            <div >
+                <ol >
+                    <ng-container *ngFor="let product of productList"><br>
+                        <li (click)="viewDetails(product)">
+                            {{product.brand}}
+                        </li>
+                    </ng-container>
+                </ol>
+            </div>
+        </section>
+    </div>
+    <div *ngIf="prdDetails">
+        <div>
+            <div class="title">
+                <h1>The details of the selected product</h1>
+            </div><br>
+            <div class="card-container">
+                <mat-card class="card">
+                    <label><label>Brand :</label> {{selectedProduct.brand}}</label>
+                    <label>Model Name : {{selectedProduct.modelName}}</label>
+                    <label>screensize: {{selectedProduct.screensize}}</label>
+                    <p> Description: {{selectedProduct.description}}</p>
+                    <div>
+                        <button class="btn" (click)="close()">Close</button>
+                        <button class="btn" (click)="back()" style="margin-left: 50px;">Back</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

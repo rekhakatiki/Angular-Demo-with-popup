@@ -1,0 +1,11 @@
+.container{
+    margin: auto;
+    display: block;
+    text-align: center;
+    color:#2aa7de;
+    margin-top: 5%;
+    font-size:18px;
+}
+.btntext{
+    margin-top:50px;
+}
